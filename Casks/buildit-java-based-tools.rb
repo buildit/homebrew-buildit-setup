@@ -6,7 +6,6 @@ cask 'buildit-java-based-tools' do
 
   depends_on cask: "java"
   depends_on cask: "java8"
-  depends_on cask: "java7"
 
   depends_on formula: "maven"
   depends_on formula: "gradle"
@@ -24,7 +23,6 @@ cask 'buildit-java-based-tools' do
     Add the following lines to your ~/.bash_profile
       alias j9="export JAVA_HOME=`/usr/libexec/java_home -v 9`; java -version"
       alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
-      alias j7="export JAVA_HOME=`/usr/libexec/java_home -v 1.7`; java -version"
     Now you can change which Java version is loaded with the configured aliases.
 
     EOS
