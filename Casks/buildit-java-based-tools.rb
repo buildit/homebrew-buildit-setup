@@ -4,13 +4,13 @@ cask 'buildit-java-based-tools' do
   url "https://s3.eu-west-2.amazonaws.com/homebrew-buildit-setup/homebrew-buildit-setup.tar.gz"
   name 'Buildit Java Based Tools - Automation of Mac setup as a Cask'
 
-  depends_on formula: "maven"
-  depends_on formula: "gradle"
-  depends_on formula: "tomcat"
-
   depends_on cask: "java"
   depends_on cask: "java8"
   depends_on cask: "java7"
+
+  depends_on formula: "maven"
+  depends_on formula: "gradle"
+  depends_on formula: "tomcat"
 
   caveats do
     <<~EOS
