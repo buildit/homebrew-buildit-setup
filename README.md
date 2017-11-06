@@ -18,7 +18,7 @@ for other Formulas and Casks to make sure that everything that is needed is inde
 
 ## How to use
 
-First it is necessary to install Homebrew. Information on how this can be done can be found [here] (https://brew.sh/)
+First it is necessary to install Homebrew. Information on how this can be done can be found [here](https://brew.sh/)
 
 To make use of these Casks, is is needed to add the Buildit Tap to your local Homebrew.
 This can be done with the following command:
