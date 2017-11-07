@@ -35,10 +35,15 @@ Also, it will be updated/upgraded with the usual ``home brew update / upgrade`` 
 ### Build Base Tools
 
 This Cask is intended to install the base tools, not making a differentiation on programming
-languages/environments. It can be installed using the command: 
+languages/environments.
+
+###### Installation 
+
 ```
 brew cask install buildit-base-tools
 ```
+
+###### Contents
 
 The following Casks and Formulas will be installed together with this Cask:
 
@@ -62,15 +67,35 @@ The following Casks and Formulas will be installed together with this Cask:
 
 ### Buildit Java Based Tools
 
-This Cask is intended to install the Java based tools. It can be installed using the command:
+This Cask is intended to install the Java based tools/environments.
+
+---
+###### Note
+Unfortunately there is a chicken-and-egg situation for this Cask. 
+Maven, Gradle and Tomcat Formulas require that a Java 1.7+ is already installed in the system. Even though this Cask list the Java dependencies,
+these are not taken into consideration (i.e. installed) before all Formula dependencies are solved. 
+So to solve this problem it is necessary to install any java version using brew manually before the installation of this Cask i.e. ``brew cask install java``
+---
+
+###### Requisites:
+As this Cask will install different versions of JDK, it is necessary to add a new Tap to Homebrew, to make
+versions that are not the latest ones available:
 
 ```
-brew cask install java
+brew tap caskroom/versions
+```
+
+
+###### Installation 
+After including the versions Tap, the *buildit-java-based-tools* Cask can be installed using the command:
+
+```
 brew cask install buildit-java-based-tools
 ```
 
-The following Casks and Formulas will be installed:
+###### Contents
 
+The following Casks and Formulas will be installed:
 * Maven (Formula)
 * Gradle (Formula)
 * Tomcat (Formula)
@@ -79,22 +104,25 @@ The following Casks and Formulas will be installed:
 * Java 7 (Cask) - using [Azul Systems](https://www.azul.com/downloads/zulu/) JDK, as Oracle one is not available as a Cask anymore. 
 More info [here](https://github.com/caskroom/homebrew-versions/pull/3914).
 
-#### Note
+## Installation limitations
 
-Unfortunately there is a chicken-and-egg situation for this Cask. 
-Maven, Gradle and Tomcat Formulas require that a Java 1.7+ is already installed in the system. Even though the *java-based-tools* Cask list the Java dependencies,
-these are not taken into consideration before all Formula dependencies are installed. 
-So, to solve this problem it is necessary to install any java version using brew manually i.e. ``brew cask install java``
+It is important to note that if any of the above Casks have already been installed outside of Homebrew environment, 
+it will break the installation (default behaviour for any Cask).
 
-### Installation limitations
+There is information of manual steps needed to finish the configuration shown as Homebrew *Caveats*. Unfortunately this information
+is displayed before the installation, so if there is the need to check what needs to configure after the installation, 
+just run the commands below accordingly:
 
-It is important to note that if any of the above Casks have already been installed without using
-Homebrew, it will break the installation (default behaviour for any Cask).
+```
+brew cask info buildit-base-tools
+brew cask info buildit-java-based-tools
+```
 
-At the end of the installation, there will be information about the manual steps needed to configure
-each "package" of Casks. Please pay attention to it.
+## Contributing
 
-### Contributing
+If you are interested in contributing to this project, please: 
+* Fork this repo; 
+* make your changes; 
+* submit a PR.
 
-If you are interested in contributing to this project, please just fork this repo, make your proposed changes and submit a PR.
-We will try to review and give feedback as quick as possible.
+We will try to review and give feedback as quickly as possible.
