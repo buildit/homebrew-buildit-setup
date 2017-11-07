@@ -76,6 +76,15 @@ The following Casks and Formulas will be installed:
 * Tomcat (Formula)
 * Java 9 (Cask)
 * Java 8 (Cask)
+* Java 7 (Cask) - using [Azul Systems](https://www.azul.com/downloads/zulu/) JDK, as Oracle one is not available as a Cask anymore. 
+More info [here](https://github.com/caskroom/homebrew-versions/pull/3914).
+
+#### Note
+
+Unfortunately there is a chicken-and-egg situation for this Cask. 
+Maven, Gradle and Tomcat Formulas require that a Java 1.7+ is already installed in the system. Even though the *java-based-tools* Cask list the Java dependencies,
+these are not taken into consideration before all Formula dependencies are installed. 
+So, to solve this problem it is necessary to install any java version using brew manually i.e. ``brew cask install java``
 
 ### Installation limitations
 
