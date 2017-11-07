@@ -70,11 +70,15 @@ The following Casks and Formulas will be installed together with this Cask:
 This Cask is intended to install the Java based tools/environments.
 
 ---
+
+
 ###### Note
+
 Unfortunately there is a chicken-and-egg situation for this Cask. 
 Maven, Gradle and Tomcat Formulas require that a Java 1.7+ is already installed in the system. Even though this Cask list the Java dependencies,
 these are not taken into consideration (i.e. installed) before all Formula dependencies are solved. 
 So to solve this problem it is necessary to install any java version using brew manually before the installation of this Cask i.e. ``brew cask install java``
+
 ---
 
 ###### Requisites:
