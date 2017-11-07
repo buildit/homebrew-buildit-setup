@@ -32,7 +32,7 @@ Also, it will be updated/upgraded with the usual ``home brew update / upgrade`` 
 
 ## What is available
 
-### Build Base Tools
+#### Build Base Tools
 
 This Cask is intended to install the base tools, not making a differentiation on programming
 languages/environments.
@@ -65,7 +65,7 @@ The following Casks and Formulas will be installed together with this Cask:
 * Tunnelblick (Cask)
 * Vagrant (Cask)
 
-### Buildit Java Based Tools
+#### Buildit Java Based Tools
 
 This Cask is intended to install the Java based tools/environments.
 
@@ -109,8 +109,8 @@ More info [here](https://github.com/caskroom/homebrew-versions/pull/3914).
 It is important to note that if any of the above Casks have already been installed outside of Homebrew environment, 
 it will break the installation (default behaviour for any Cask).
 
-There is information of manual steps needed to finish the configuration shown as Homebrew *Caveats*. Unfortunately this information
-is displayed before the installation, so if there is the need to check what needs to configure after the installation, 
+The information about manual steps needed is displayed as Homebrew *Caveats*. Unfortunately this information
+is shown before the installation, so if there is the need to check what needs to configure after the installation finishes, 
 just run the commands below accordingly:
 
 ```
