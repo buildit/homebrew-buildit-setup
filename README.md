@@ -35,7 +35,10 @@ Also, it will be updated/upgraded with the usual ``home brew update / upgrade`` 
 ### Build Base Tools
 
 This Cask is intended to install the base tools, not making a differentiation on programming
-languages/environments. It can be installed using the command ``brew cask install buildit-base-tools``
+languages/environments. It can be installed using the command: 
+```
+brew cask install buildit-base-tools
+```
 
 The following Casks and Formulas will be installed together with this Cask:
 
@@ -59,7 +62,12 @@ The following Casks and Formulas will be installed together with this Cask:
 
 ### Buildit Java Based Tools
 
-This Cask is intended to install the Java based tools. It can be installed using the command ``brew cask install buildit-java-based-tools``.
+This Cask is intended to install the Java based tools. It can be installed using the command:
+
+```
+brew cask install java
+brew cask install buildit-java-based-tools
+```
 
 The following Casks and Formulas will be installed:
 
@@ -68,12 +76,16 @@ The following Casks and Formulas will be installed:
 * Tomcat (Formula)
 * Java 9 (Cask)
 * Java 8 (Cask)
-* Java 7 (Cask)
 
-### Notes
+### Installation limitations
 
-As a note, it is important to note that if any of the above Casks have already been installed without using
+It is important to note that if any of the above Casks have already been installed without using
 Homebrew, it will break the installation (default behaviour for any Cask).
 
 At the end of the installation, there will be information about the manual steps needed to configure
 each "package" of Casks. Please pay attention to it.
+
+### Contributing
+
+If you are interested in contributing to this project, please just fork this repo, make your proposed changes and submit a PR.
+We will try to review and give feedback as quick as possible.
