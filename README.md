@@ -55,7 +55,6 @@ The following Casks and Formulas will be installed together with this Cask:
 * AWS CLI (Formula)
 * Packer (Formula)
 * Docker (Formula)
-* Chromedriver (Formula)
 * Dropbox (Cask)
 * Google Chrome (Cask)
 * Firefox (Cask)
@@ -64,6 +63,7 @@ The following Casks and Formulas will be installed together with this Cask:
 * Slack (Cask)
 * Tunnelblick (Cask)
 * Vagrant (Cask)
+* Chromedriver (Cask)
 
 #### Buildit Java Based Tools
 
