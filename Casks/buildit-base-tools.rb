@@ -12,7 +12,6 @@ cask 'buildit-base-tools' do
   depends_on formula: "awscli"
   depends_on formula: "packer"
   depends_on formula: "docker"
-  depends_on formula: "chromedriver"
 
   depends_on cask: "dropbox"
   depends_on cask: "google-chrome"
@@ -22,6 +21,7 @@ cask 'buildit-base-tools' do
   depends_on cask: "slack"
   depends_on cask: "tunnelblick"
   depends_on cask: "vagrant"
+  depends_on cask: "chromedriver"
 
   caveats do
     <<~EOS
